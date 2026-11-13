@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4U-S-TIPS - Sports Predictions Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #1e293b;
+            padding: 20px;
+            border-bottom: 2px solid #22c55e;
+        }
+        h1 {
+            color: #22c55e;
+            margin: 0;
+        }
+        .container {
+            padding: 40px 20px;
+        }
+        .btn {
+            background-color: #22c55e;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #16a34a;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>4U-S-TIPS ⚽</h1>
+        <p>Jukwaa Lako la Kuaminika la Utabiri wa Michezo</p>
+    </header>
+
+    <div class="container">
+        <h2>Karibu kwenye Utabiri Bora wa Leo!</h2>
+        <p>Tunakuletea wachanganuzi na takwimu sahihi za mechi mbalimbali duniani.</p>
+        <a href="#" class="btn">Angalia Tips za Leo</a>
+    </div>
+
+</body>
+</html>

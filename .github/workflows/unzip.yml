@@ -1,0 +1,36 @@
+name: Extract 4U'S TIPS Backend
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract backend ZIP
+        run: |
+          mkdir -p /tmp/4u
+          unzip -o 4us_tips_backend_starter.zip -d /tmp/4u
+          FILE=$(find /tmp/4u -name package.json -print -quit)
+          if [ -z "$FILE" ]; then
+            echo "package.json haijapatikana"
+            exit 1
+          fi
+          ROOT=$(dirname "$FILE")
+          cp -R "$ROOT"/. .
+          rm -f 4us_tips_backend_starter.zip
+
+      - name: Save extracted files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Extract 4U'S TIPS backend files"
+          git push
